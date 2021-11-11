@@ -1,0 +1,21 @@
+<head>
+
+  <link rel="stylesheet" type="text/css" href="./home.component.scss" media="screen" />
+</head>
+
+<p>
+  <mat-toolbar>
+    <span>My Application</span>
+  </mat-toolbar>
+</p>
+
+<div class="box">
+<h2> Abrir conta </h2>
+<p> Abra sua conta com praticidade, segurança e sem sair de casa! </p>
+
+<form (ngSubmit)="salvarCpf(cpf)" >
+    <input type="text" name="cpf" placeholder="insira seu cpf" [(ngModel)]="cpf" autofocus onChange="salvarCpf(cpf)" />
+
+  <button class="confirm" onPress="salvarCpf(cpf)"> abrir uma conta </button>
+</form>
+</div>
