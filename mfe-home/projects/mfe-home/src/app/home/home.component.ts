@@ -1,3 +1,4 @@
+import { HomeService } from './home.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,15 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  cpf: number = 0;
+  cpf: string = '';
+  error: boolean = false;
 
+  constructor(private service: HomeService) { }
 
-  salvarCpf(valor: any){
-    this.cpf = valor;
+  salvarCpf(valor: string){
+    this.cpf = valor
     console.log(this.cpf)
-  }
 
-  constructor() { }
+    this.service.consultaCpf(this.cpf).subscribe(
+      success => {
+        console.log(success)
+      },
+      error => console.log(error)
+    )
+  }
 
   ngOnInit(): void {
   }
