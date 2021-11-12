@@ -21,7 +21,10 @@ export class HomeComponent implements OnInit {
       success => {
         console.log(success)
       },
-      error => console.log(error)
+      error => {
+        this.error = true
+        console.log(error)
+      }
     )
   }
 
