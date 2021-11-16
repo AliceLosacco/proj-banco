@@ -1,0 +1,29 @@
+<head>
+
+  <link rel="stylesheet" type="text/css" href="./cadastro.component.html" media="screen" />
+</head>
+
+<p>
+  <mat-toolbar>
+    <span>Banco Bauhaus</span>
+  </mat-toolbar>
+</p>
+
+<div class="box">
+<h2> Abrir conta </h2>
+<p> Abra sua conta com praticidade, segurança e sem sair de casa! </p>
+
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()"  >
+
+    <input type="text" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Ex; João da Silva" >
+    <input type="email" id="email" formControlName="email" placeholder="Ex; seuemail@email.com" >
+    <input type="text" id="cpf" formControlName="cpf" placeholder="apenas números"  >
+    <input type="date" id="dataNascimento" formControlName="dataNascimento" placeholder="Ex; 12/01/2001"  >
+    <input type="text" id="salarioMensal" formControlName="salarioMensal" placeholder="Ex; 1500,00" >
+    <input type="text" id="senha" formControlName="senha" >
+    <input type="text" id="numeroCelular" formControlName="numeroCelular" >
+
+
+  <button class="confirm" routerLink="/cadastro"> abrir uma conta </button>
+</form>
+</div>

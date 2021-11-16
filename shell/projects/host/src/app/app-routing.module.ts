@@ -1,7 +1,6 @@
 import { loadRemoteModule } from '@angular-architects/module-federation-runtime';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 
 
@@ -24,6 +23,16 @@ const routes: Routes = [
             remoteName: 'mfeHome',
             exposedModule: './HomeModule'
           }).then((m) => m.HomeModule)
+
+      },
+      {
+        path: 'cadastro',
+        loadChildren: () =>
+          loadRemoteModule({
+            remoteEntry: 'http://localhost:4200/remoteEntry.js',
+            remoteName: 'mfeCad',
+            exposedModule: './CadastroModule'
+          }).then((m) => m.CadastroModule)
 
       },
       {

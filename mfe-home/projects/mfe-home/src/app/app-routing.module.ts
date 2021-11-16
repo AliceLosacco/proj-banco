@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'cadastro',
+    loadChildren: () =>
+      import('./cadastro/cadastro.module').then(
+        (m) => m.CadastroModule
+      )
   },
 
   {
@@ -16,7 +17,11 @@ const routes: Routes = [
       import('./home/home.module').then(
         (m) => m.HomeModule
       )
-
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 
 

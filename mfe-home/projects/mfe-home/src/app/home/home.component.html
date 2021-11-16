@@ -14,8 +14,9 @@
 <p> Abra sua conta com praticidade, segurança e sem sair de casa! </p>
 
 <form (ngSubmit)="salvarCpf(cpf)" >
-    <input type="text" name="cpf" placeholder="insira seu cpf" [(ngModel)]="cpf" autofocus onChange="salvarCpf(cpf)" />
+    <input type="text" name="cpf" placeholder="insira seu cpf" [(ngModel)]="cpf" autofocus />
 
-  <button class="confirm" onPress="salvarCpf(cpf)"> abrir uma conta </button>
+  <button class="confirm" routerLink="/cadastro"> abrir uma conta </button>
 </form>
 </div>
+
