@@ -32,7 +32,7 @@
 						],
 						"styles": [
 							"projects/mfe-home/src/styles.scss",
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
+							"./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
 						],
 						"scripts": [],
 						"extraWebpackConfig": "projects/mfe-home/webpack.config.js",
@@ -110,7 +110,7 @@
 						],
 						"styles": [
 							"projects/mfe-home/src/styles.scss",
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
+							"./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
 						],
 						"scripts": []
 					}

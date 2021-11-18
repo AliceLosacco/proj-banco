@@ -1,0 +1,22 @@
+<head>
+
+  <link rel="stylesheet" type="text/css" href="./foto.component.html" media="screen" />
+</head>
+
+<p>
+  <mat-toolbar>
+    <span>Banco Bauhaus</span>
+  </mat-toolbar>
+</p>
+
+<div class="box">
+<h2> Selfie </h2>
+<p> Envie uma selfie para validarmos sua identidade! </p>
+
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()"  >
+    <label>Selfie</label>
+    <input type="text" label="Nome Completo" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Foto" >
+
+  <button class="confirm" routerLink="/cadastro"> abrir uma conta </button>
+</form>
+</div>

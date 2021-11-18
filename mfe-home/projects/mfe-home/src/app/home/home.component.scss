@@ -1,37 +1,4 @@
-$primary-color: #21409a;
-$secondary-color: #ffde17;
-$terciary-color: #be1e2d;
-$font-style: Helvetica, sans-seriff;
-
-div.box {
-  display: flex;
-  flex-direction: column;
-  font-family: $font-style;
-  align-items: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-button.confirm {
-  background-color: $secondary-color;
-  border-radius: 5px;
-  border: none;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 8px 8px;
-}
-
-input {
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 14px;
-  padding: 10px 14px;
-  width: 100%;
-}
+$primary-color: #e69318;
 
 mat-toolbar {
   background-color: $primary-color;

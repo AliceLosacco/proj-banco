@@ -3,6 +3,7 @@
   <link rel="stylesheet" type="text/css" href="./cadastro.component.html" media="screen" />
 </head>
 
+<body>
 <p>
   <mat-toolbar>
     <span>Banco Bauhaus</span>
@@ -10,20 +11,36 @@
 </p>
 
 <div class="box">
-<h2> Abrir conta </h2>
-<p> Abra sua conta com praticidade, segurança e sem sair de casa! </p>
+<h2> Informações Pessoais </h2>
+<p> Insira a seguir suas informações pessoais para prosseguir com a abertura da conta </p>
 
 <form [formGroup]="formulario" (ngSubmit)="onSubmit()"  >
+    <label>Nome Completo</label>
+    <input type="text" label="Nome Completo" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Ex; João da Silva" >
 
-    <input type="text" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Ex; João da Silva" >
+    <label>Email</label>
     <input type="email" id="email" formControlName="email" placeholder="Ex; seuemail@email.com" >
+
+    <label>CPF</label>
     <input type="text" id="cpf" formControlName="cpf" placeholder="apenas números"  >
+
+    <label>Data de Nascimetno</label>
     <input type="date" id="dataNascimento" formControlName="dataNascimento" placeholder="Ex; 12/01/2001"  >
+
+    <label>Salário Mensal</label>
     <input type="text" id="salarioMensal" formControlName="salarioMensal" placeholder="Ex; 1500,00" >
+
+    <label>Senha</label>
     <input type="text" id="senha" formControlName="senha" >
+
+    <label>Confirmação da Senha</label>
+    <input type="text" id="senha"  >
+
+    <label>Número de Celular</label>
     <input type="text" id="numeroCelular" formControlName="numeroCelular" >
 
 
   <button class="confirm" routerLink="/cadastro"> abrir uma conta </button>
 </form>
 </div>
+</body>

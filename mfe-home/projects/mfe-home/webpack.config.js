@@ -24,32 +24,30 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
 
+        // For remotes (please adjust)
+        name: "mfeHome",
+        filename: "remoteEntry.js",
+        exposes: {
+            './HomeModule': './projects/mfe-home/src/app/home/home.module.ts',
+            './CadastroModule' : './projects/mfe-home/src/app/cadastro/cadastro.module.ts',
+            './FotoModule' : './projects/mfe-home/src/app/foto/foto.module.ts'
+        },
 
-      //exporta os modulos para o shell (exportar qualquer arquivo)
+        // For hosts (please adjust)
+        // remotes: {
+        //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
 
-      name: "mfeHome",
-      filename: "remoteEntry.js",
-      exposes: {
-        './HomeModule': 'projects/mfe-home/src/app/home/home.module.ts',
-        './CadastroModule': 'projects/mfe-home/src/app/cadastro/cadastro.module.ts'
-      },
+        // },
 
-      // remotes: {
-      //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
+        shared: share({
+          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/material": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
 
-      // },
-
-
-      //EXPORTA AS LIBS NECESSARIAS
-
-      shared: share({
-        "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-        "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-        "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-        "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-        "@angular/material": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-        ...sharedMappings.getDescriptors()
-      })
+          ...sharedMappings.getDescriptors()
+        })
 
     }),
     sharedMappings.getPlugin()

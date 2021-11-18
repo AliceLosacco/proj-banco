@@ -4,6 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'foto',
+    loadChildren: () =>
+      import('./foto/foto.module').then(
+        (m) => m.FotoModule
+      )
+  },
+  {
     path: 'cadastro',
     loadChildren: () =>
       import('./cadastro/cadastro.module').then(
