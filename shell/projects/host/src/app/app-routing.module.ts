@@ -30,9 +30,19 @@ const routes: Routes = [
         loadChildren: () =>
           loadRemoteModule({
             remoteEntry: 'http://localhost:4200/remoteEntry.js',
-            remoteName: 'mfeCad',
+            remoteName: 'mfeHome',
             exposedModule: './CadastroModule'
           }).then((m) => m.CadastroModule)
+
+      },
+      {
+        path: 'foto',
+        loadChildren: () =>
+          loadRemoteModule({
+            remoteEntry: 'http://localhost:4200/remoteEntry.js',
+            remoteName: 'mfeHome',
+            exposedModule: './FotoModule'
+          }).then((m) => m.FotoModule)
 
       },
       {
