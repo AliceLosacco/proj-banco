@@ -1,0 +1,48 @@
+
+$primary-color: #e69318;
+$secondary-color: #2842b8;
+$terciary-color: #be1e2d;
+$font-style: Helvetica, sans-seriff;
+
+div.body {
+  background-color: rgb(219, 218, 212);
+}
+
+div.box {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-style;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button.confirm {
+  background-color: $secondary-color;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 8px;
+}
+
+input {
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 10px 14px;
+  width: 100%;
+}
+
+mat-toolbar {
+  background-color: $primary-color;
+}
+
+label {
+  font-size: 14px;
+}

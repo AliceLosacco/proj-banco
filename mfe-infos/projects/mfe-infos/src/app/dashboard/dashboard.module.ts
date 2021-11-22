@@ -1,3 +1,5 @@
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -11,7 +13,9 @@ import { DashboardComponent } from './dashboard.component';
     ],
     imports: [
         BrowserModule,
-        DashboardRoutingModule
+        DashboardRoutingModule,
+        MatFormFieldModule,
+        MatToolbarModule
 
     ],
     providers: []
