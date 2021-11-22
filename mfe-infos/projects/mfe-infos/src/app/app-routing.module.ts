@@ -17,6 +17,24 @@ const routes: Routes = [
                 (m) => m.InfosModule
             )
 
+    },
+
+    {
+        path: 'planos',
+        loadChildren: () =>
+            import('./planos/planos.module').then(
+                (m) => m.PlanosModule
+            )
+
+    },
+
+    {
+        path: 'dashboard',
+        loadChildren: () =>
+            import('./dashboard/dashboard.module').then(
+                (m) => m.DashboardModule
+            )
+
     }
 
 

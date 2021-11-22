@@ -55,6 +55,26 @@ const routes: Routes = [
           }).then((m) => m.InfosModule)
 
       },
+      {
+        path: 'planos',
+        loadChildren: () =>
+          loadRemoteModule({
+            remoteEntry: 'http://localhost:3000/remoteEntry.js',
+            remoteName: 'mfeInfos',
+            exposedModule: './PlanosModule'
+          }).then((m) => m.PlanosModule)
+
+      },
+      {
+        path: 'dashboard',
+        loadChildren: () =>
+          loadRemoteModule({
+            remoteEntry: 'http://localhost:3000/remoteEntry.js',
+            remoteName: 'mfeInfos',
+            exposedModule: './DashboardModule'
+          }).then((m) => m.DashboardModule)
+
+      }
 
     ]
 
