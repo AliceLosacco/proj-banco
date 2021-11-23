@@ -56,7 +56,7 @@ export class CadastroComponent implements OnInit {
       console.log('userData')
     }
     else {
-      //this.formulario.patchValue({cpf: cpf})
+      this.formulario.patchValue({cpf: cpf})
     }
   }
 

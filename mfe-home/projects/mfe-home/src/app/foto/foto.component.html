@@ -14,8 +14,7 @@
 <p> Envie uma selfie para validarmos sua identidade! </p>
 
 <form [formGroup]="formulario" (ngSubmit)="onSubmit()"  >
-    <label>Selfie</label>
-    <input type="text" label="Nome Completo" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Foto" >
+    <input type="file" id="foto" formControlName="foto" accept="image/jpg, image/jpeg, image/png" >
 
   <button class="confirm" routerLink="/cadastro"> abrir uma conta </button>
 </form>

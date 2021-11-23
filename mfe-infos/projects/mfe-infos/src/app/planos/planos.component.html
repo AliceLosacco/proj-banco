@@ -1,1 +1,19 @@
-<p>planos works!</p>
+<head>
+  <link rel="stylesheet" type="text/css" href="./planos.component.html" media="screen" />
+</head>
+
+<p>
+  <mat-toolbar>
+    <span>Banco Bauhaus</span>
+  </mat-toolbar>
+</p>
+
+<div class="box">
+<h2> Planos </h2>
+<p> Escolha entre um dos planos disponíveis </p>
+
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()"  >
+
+  <button class="confirm" routerLink="/infos"> abrir uma conta </button>
+</form>
+</div>
