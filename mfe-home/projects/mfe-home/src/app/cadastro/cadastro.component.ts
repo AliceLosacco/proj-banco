@@ -1,8 +1,7 @@
 import { CadastroService } from './cadastro.service';
-import { ActivatedRoute, Params, Router, Routes } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {
-  FormBuilder,
   FormControl,
   FormGroup,
   Validators,
@@ -13,6 +12,7 @@ import {
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.scss'],
 })
+
 export class CadastroComponent implements OnInit {
   formulario: FormGroup;
   userData: boolean = false;
@@ -58,13 +58,15 @@ export class CadastroComponent implements OnInit {
     console.log(this.formulario);
     this.service.inserirDados(this.formulario.value).subscribe(
       (dados) => {
-        console.log(dados)
-        this.router.navigate(['foto'], {queryParams: { cpf: this.formulario.value.cpf }})
+        console.log(dados);
+        this.router.navigate(['foto'], {
+          queryParams: { cpf: this.formulario.value.cpf },
+        });
       },
       (error) => {
-        console.log(error)
+        console.log(error);
       }
-    )
+    );
   }
 
   transformaData(data: string) {
@@ -82,7 +84,7 @@ export class CadastroComponent implements OnInit {
       salarioMensal: dadosValue.salarioMensal,
       numeroCelular: dadosValue.numeroCelular,
       senha: dadosValue.senha,
-       endereco: {
+      endereco: {
         cep: dadosValue.endereco.cep,
         rua: dadosValue.endereco.rua,
         numero: dadosValue.endereco.numero,
