@@ -10,6 +10,7 @@ const routes: Routes = [
         (m) => m.FotoModule
       )
   },
+
   {
     path: 'cadastro',
     loadChildren: () =>

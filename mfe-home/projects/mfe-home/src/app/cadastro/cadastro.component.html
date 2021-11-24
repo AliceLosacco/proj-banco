@@ -3,45 +3,88 @@
   <link rel="stylesheet" type="text/css" href="./cadastro.component.html" media="screen" />
 </head>
 
-<body>
-<p>
-  <mat-toolbar>
-    <span>Banco Bauhaus</span>
-  </mat-toolbar>
-</p>
+<div>
+
+  <nav class="navbar navbar-light" style="background-color: #F2CF63;">
+    <span class="navbar-brand mb-0 h1">Banco Bauhaus</span>
+  </nav>
 
 <div class="box">
 <h2> Informações Pessoais </h2>
 <p> Insira a seguir suas informações pessoais para prosseguir com a abertura da conta </p>
 
+
 <form [formGroup]="formulario" (ngSubmit)="onSubmit()"  >
-
+  <div class="form-row">
+<div class="col">
   <label>Nome Completo</label>
-  <input type="text" label="Nome Completo" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Ex; João da Silva" >
+  <input type="text" class="form-control" label="Nome Completo" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Ex; João da Silva" >
+</div>
 
+  <div class="col">
   <label>Email</label>
-  <input type="email" id="email" formControlName="email" placeholder="Ex; seuemail@email.com" >
+  <input type="email" class="form-control" id="email" formControlName="email" placeholder="Ex; seuemail@email.com" >
+</div>
 
+</div>
+<div class="form-row">
+<div class="col">
   <label>CPF</label>
-  <input type="text" id="cpf" formControlName="cpf" placeholder="apenas números"  >
-
+  <input type="text" class="form-control" id="cpf" formControlName="cpf" placeholder="apenas números"  >
+</div>
+  <div class="form-group col-md-2">
   <label>Data de Nascimento</label>
-  <input type="date" id="dataNascimento" formControlName="dataNascimento" placeholder="Ex; 12/01/2001"  >
+  <input type="date" class="form-control" id="dataNascimento" formControlName="dataNascimento" placeholder="Ex; 12/01/2001"  >
+</div>
 
+  <div class="col">
   <label>Salário Mensal</label>
-  <input type="text" id="salarioMensal" formControlName="salarioMensal" placeholder="Ex; 1500,00" >
+  <input type="text" class="form-control" id="salarioMensal" formControlName="salarioMensal" placeholder="Ex; 1500,00" >
+</div>
+</div>
 
+<div class="form-row">
+  <div class="col">
   <label>Senha</label>
-  <input type="text" id="senha" formControlName="senha" >
+  <input type="text" class="form-control" id="senha" formControlName="senha" >
+</div>
 
+  <div class="col">
   <label>Confirmação da Senha</label>
-  <input type="text" id="senha"  >
+  <input type="text" class="form-control" id="senha"  >
+  </div>
 
+  <div class="col">
   <label>Número de Celular</label>
-  <input type="text" id="numeroCelular" formControlName="numeroCelular" >
+  <input type="text" class="form-control" id="numeroCelular" formControlName="numeroCelular" >
+</div>
+</div>
+
+<div class="form-row">
+
+  <div class="col">
+  <label>CEP</label>
+  <input type="text" class="form-control" id="senha" formControlName="endereco.cep" >
+</div>
+
+  <div class="col">
+  <label>Rua</label>
+  <input type="text" class="form-control" id="endereco.rua"  >
+  </div>
+
+  <div class="form-group col-md-2">
+    <label>Número</label>
+    <input type="text" class="form-control" id="numeroCelular" formControlName="enredeco.numero" >
+    </div>
+
+  <div class="col">
+  <label>Bairro</label>
+  <input type="text" class="form-control" id="numeroCelular" formControlName="enredeco.bairro" >
+</div>
+</div>
 
 
   <button class="confirm" routerLink="/cadastro"> abrir uma conta </button>
 </form>
 </div>
-</body>
+</div>
