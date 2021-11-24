@@ -18,9 +18,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
         BrowserModule,
         HomeRoutingModule,
         FormsModule,
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
         MatToolbarModule,
         HttpClientModule
     ],

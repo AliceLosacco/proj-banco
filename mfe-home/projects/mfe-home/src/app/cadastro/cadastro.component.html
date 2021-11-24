@@ -15,29 +15,30 @@
 <p> Insira a seguir suas informações pessoais para prosseguir com a abertura da conta </p>
 
 <form [formGroup]="formulario" (ngSubmit)="onSubmit()"  >
-    <label>Nome Completo</label>
-    <input type="text" label="Nome Completo" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Ex; João da Silva" >
 
-    <label>Email</label>
-    <input type="email" id="email" formControlName="email" placeholder="Ex; seuemail@email.com" >
+  <label>Nome Completo</label>
+  <input type="text" label="Nome Completo" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Ex; João da Silva" >
 
-    <label>CPF</label>
-    <input type="text" id="cpf" formControlName="cpf" placeholder="apenas números"  >
+  <label>Email</label>
+  <input type="email" id="email" formControlName="email" placeholder="Ex; seuemail@email.com" >
 
-    <label>Data de Nascimetno</label>
-    <input type="date" id="dataNascimento" formControlName="dataNascimento" placeholder="Ex; 12/01/2001"  >
+  <label>CPF</label>
+  <input type="text" id="cpf" formControlName="cpf" placeholder="apenas números"  >
 
-    <label>Salário Mensal</label>
-    <input type="text" id="salarioMensal" formControlName="salarioMensal" placeholder="Ex; 1500,00" >
+  <label>Data de Nascimento</label>
+  <input type="date" id="dataNascimento" formControlName="dataNascimento" placeholder="Ex; 12/01/2001"  >
 
-    <label>Senha</label>
-    <input type="text" id="senha" formControlName="senha" >
+  <label>Salário Mensal</label>
+  <input type="text" id="salarioMensal" formControlName="salarioMensal" placeholder="Ex; 1500,00" >
 
-    <label>Confirmação da Senha</label>
-    <input type="text" id="senha"  >
+  <label>Senha</label>
+  <input type="text" id="senha" formControlName="senha" >
 
-    <label>Número de Celular</label>
-    <input type="text" id="numeroCelular" formControlName="numeroCelular" >
+  <label>Confirmação da Senha</label>
+  <input type="text" id="senha"  >
+
+  <label>Número de Celular</label>
+  <input type="text" id="numeroCelular" formControlName="numeroCelular" >
 
 
   <button class="confirm" routerLink="/cadastro"> abrir uma conta </button>

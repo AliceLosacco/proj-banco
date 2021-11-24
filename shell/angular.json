@@ -32,7 +32,8 @@
 						],
 						"styles": [
 							"projects/host/src/styles.scss",
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "./node_modules/bootstrap/scss/bootstrap.scss"
 						],
 						"scripts": [],
 						"extraWebpackConfig": "projects/host/webpack.config.js",
@@ -110,7 +111,8 @@
 						],
 						"styles": [
 							"projects/host/src/styles.scss",
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "./node_modules/bootstrap/scss/bootstrap.scss"
 						],
 						"scripts": []
 					}

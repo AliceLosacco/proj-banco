@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
         else {
           this.router.navigate(['cadastro'], {queryParams: { cpf: this.cpf }})
         }
-
       },
       error => {
         this.error = true

@@ -194,7 +194,7 @@
     "symbol-observable" "4.0.0"
     "uuid" "8.3.2"
 
-"@angular/common@^12.0.0", "@angular/common@^12.0.0 || ^13.0.0-0", "@angular/common@~12.2.0":
+"@angular/common@^12.0.0 || ^13.0.0-0", "@angular/common@~12.2.0":
   "integrity" "sha512-i1VUoGYYx3tMEpmGQvaLt6x4C/MWDxUPATKJwnawLbHDLfAHkyXiCASmcMtaNt1EvOd/uN/J2ONVpF6J49CnMQ=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-12.2.12.tgz"
   "version" "12.2.12"
@@ -228,21 +228,21 @@
   dependencies:
     "tslib" "^2.2.0"
 
-"@angular/core@^12.0.0", "@angular/core@^12.0.0 || ^13.0.0-0", "@angular/core@~12.2.0":
+"@angular/core@^12.0.0 || ^13.0.0-0", "@angular/core@~12.2.0":
   "integrity" "sha512-DdZbhyVvwlYO5aLZi5IxJRflZ55Sae72cJAIK4+I5yTrVEf8iDwMZwnRhsv5rOwdEk12Zs8Ppb9JkpaFWium9Q=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-12.2.12.tgz"
   "version" "12.2.12"
   dependencies:
     "tslib" "^2.2.0"
 
-"@angular/forms@^12.0.0", "@angular/forms@^12.0.0 || ^13.0.0-0", "@angular/forms@~12.2.0":
+"@angular/forms@^12.0.0 || ^13.0.0-0", "@angular/forms@~12.2.0":
   "integrity" "sha512-qZKN1igKaeoFqs7ETiVOBJz4KZo9SmDuUrTbkylrYe9I6wHOsmjZSW49M4Lq5dsczl12kTxc3m83RIsRPZAw6Q=="
   "resolved" "https://registry.npmjs.org/@angular/forms/-/forms-12.2.12.tgz"
   "version" "12.2.12"
   dependencies:
     "tslib" "^2.2.0"
 
-"@angular/localize@^12.0.0", "@angular/localize@~12.2.0":
+"@angular/localize@~12.2.0":
   "integrity" "sha512-mAGs86JaWaoHN/+Mmvq1QppiTbIT1FWC5cUe0dnpGStfoKqiULPSjiHTzlfJw/eUZUMOMD7C8kjbbhv3jjLTIQ=="
   "resolved" "https://registry.npmjs.org/@angular/localize/-/localize-12.2.13.tgz"
   "version" "12.2.13"
@@ -1264,13 +1264,6 @@
     "loader-utils" "^2.0.0"
     "merge-source-map" "^1.1.0"
     "schema-utils" "^2.7.0"
-
-"@ng-bootstrap/ng-bootstrap@10.0.0":
-  "integrity" "sha512-Sz+QaxjuyJYJ+zyUbf0TevgcgVesCPQiiFiggEzxKjzY5R+Hvq3YgryLdXf2r/ryePL+C3FXCcmmKpTM5bfczQ=="
-  "resolved" "https://registry.npmjs.org/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-10.0.0.tgz"
-  "version" "10.0.0"
-  dependencies:
-    "tslib" "^2.1.0"
 
 "@ngtools/webpack@12.2.12":
   "integrity" "sha512-j3043wP+EWk2zMmAYrOzecpUX2n37R6XqypEBbj1qLAQBiSDulRN0dIsZzgTlrBgeOQ1YtFoRMuqaPsGIbuNiw=="
@@ -6776,7 +6769,7 @@
   dependencies:
     "queue-microtask" "^1.2.2"
 
-"rxjs@^6.5.3 || ^7.0.0", "rxjs@^6.5.5", "rxjs@~6.6.0", "rxjs@~6.6.3", "rxjs@6.6.7":
+"rxjs@^6.5.3 || ^7.0.0", "rxjs@~6.6.0", "rxjs@~6.6.3", "rxjs@6.6.7":
   "integrity" "sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ=="
   "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz"
   "version" "6.6.7"
@@ -7601,7 +7594,7 @@
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"
 
-"tslib@^2.0.0", "tslib@^2.1.0", "tslib@^2.2.0", "tslib@^2.3.0":
+"tslib@^2.0.0", "tslib@^2.2.0", "tslib@^2.3.0":
   "integrity" "sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.3.1.tgz"
   "version" "2.3.1"

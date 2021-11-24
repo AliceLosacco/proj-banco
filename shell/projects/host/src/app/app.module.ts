@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +15,8 @@ import { MainComponent } from './components/main/main.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
