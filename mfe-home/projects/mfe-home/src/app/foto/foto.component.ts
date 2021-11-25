@@ -9,9 +9,13 @@ import { FotoService } from './foto.service';
 })
 export class FotoComponent implements OnInit {
 
+  //recebe a foto do html
   foto: string = '';
+  //recebe cpf para passar para a tela de planos
   cpf: string = '';
+  //recebe salário mensal para passar para a tela de planos
   salarioMensal: string = '';
+  //variável que guarda a foto no formato necessário para chamar o serviço
   formData!: FormData;
 
   constructor(
@@ -20,6 +24,7 @@ export class FotoComponent implements OnInit {
     private route: ActivatedRoute
     ) { }
 
+  //recebe os parâmetros cpf e salarioMensal da rota
   ngOnInit(): void {
     this.route.queryParams.subscribe((queryParams: Params) => {
       this.cpf = queryParams['cpf'];
@@ -27,6 +32,7 @@ export class FotoComponent implements OnInit {
     })
   }
 
+  //coloca o input de foto do html dentro do FormData para enviar para o serviço
   inputFoto(event: any){
     if (event.target.files && event.target.files[0]){
       const foto = event.target.files[0];
@@ -36,6 +42,7 @@ export class FotoComponent implements OnInit {
     }
   }
 
+  //chama o serviço e faz o roteamento
   onSubmit() {
     this.service.enviaFoto(this.formData).subscribe(
       (res) => {
