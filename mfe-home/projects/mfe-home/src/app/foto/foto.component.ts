@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+import { FotoService } from './foto.service';
 
 @Component({
   selector: 'app-foto',
@@ -8,19 +9,42 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 })
 export class FotoComponent implements OnInit {
 
-  formulario!: FormGroup;
+  foto: string = '';
+  cpf: string = '';
+  salarioMensal: string = '';
+  formData!: FormData;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private service: FotoService,
+    private router : Router,
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
-    this.formulario = this.formBuilder.group({
-      foto: new FormControl(""),
-
+    this.route.queryParams.subscribe((queryParams: Params) => {
+      this.cpf = queryParams['cpf'];
+      this.salarioMensal = queryParams['salarioMensal'];
     })
   }
 
+  inputFoto(event: any){
+    if (event.target.files && event.target.files[0]){
+      const foto = event.target.files[0];
+      const data = new FormData
+      data.append('filetoupload', foto)
+      this.formData = data;
+    }
+  }
+
   onSubmit() {
-    console.log(this.formulario)
+    this.service.enviaFoto(this.formData).subscribe(
+      (res) => {
+          this.router.navigate(['planos'], {queryParams: { cpf: this.cpf, salarioMensal: this.salarioMensal }})
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
   }
 
 }

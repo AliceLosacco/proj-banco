@@ -1,21 +1,17 @@
 import { CadastroService } from './cadastro.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.scss'],
 })
-
 export class CadastroComponent implements OnInit {
+  //variável que guardará o Form de cadastro
   formulario: FormGroup;
-  userData: boolean = false;
+  //variável que recebe o cpf informado na primeira página
   cpf: string = '';
 
   constructor(
@@ -23,6 +19,7 @@ export class CadastroComponent implements OnInit {
     private service: CadastroService,
     private router: Router
   ) {
+    //criação do data-driven form
     this.formulario = new FormGroup({
       nomeCompleto: new FormControl(''),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -46,21 +43,22 @@ export class CadastroComponent implements OnInit {
     });
   }
 
+  //recebe o CPF pelo parâmetro para realizar a chamada do serviço
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: Params) => {
       this.cpf = params['cpf'];
-      this.userData = params['userData'];
-      this.getUserData(this.cpf, this.userData);
+      this.getUserData(this.cpf);
     });
   }
 
   onSubmit() {
-    console.log(this.formulario);
     this.service.inserirDados(this.formulario.value).subscribe(
       (dados) => {
-        console.log(dados);
         this.router.navigate(['foto'], {
-          queryParams: { cpf: this.formulario.value.cpf },
+          queryParams: {
+            cpf: this.formulario.value.cpf,
+            salarioMensal: this.formulario.value.salarioMensal,
+          },
         });
       },
       (error) => {
@@ -96,19 +94,22 @@ export class CadastroComponent implements OnInit {
     });
   }
 
-  getUserData(cpfValue: string, userData: boolean) {
-    if (userData) {
-      this.service.consultaCpf(cpfValue).subscribe(
-        (dados) => {
+  //Chamada do serviço, popula o form caso retorne dados ou preenche o campo cpf caso não haja dados
+  getUserData(cpfValue: string) {
+    this.service.consultaCpf(cpfValue).subscribe(
+      (dados) => {
+        const dadosUsuario: any = dados
+        if (dadosUsuario.cliente) {
           const dadosValue: any = dados;
           this.populaForm(dadosValue.cliente);
-        },
-        (error) => {
-          console.log(error);
+        } else {
+          this.formulario.patchValue({ cpf: cpfValue });
         }
-      );
-    } else {
-      this.formulario.patchValue({ cpf: cpfValue });
-    }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
+
 }

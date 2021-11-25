@@ -3,19 +3,23 @@
   <link rel="stylesheet" type="text/css" href="./foto.component.html" media="screen" />
 </head>
 
-<p>
-  <mat-toolbar>
-    <span>Banco Bauhaus</span>
-  </mat-toolbar>
-</p>
+
+<nav class="navbar navbar-light" style="background-color: #F2CF63;">
+  <span class="navbar-brand mb-0 h1">Banco Bauhaus</span>
+</nav>
 
 <div class="box">
 <h2> Selfie </h2>
 <p> Envie uma selfie para validarmos sua identidade! </p>
 
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()"  >
-    <input type="file" id="foto" formControlName="foto" accept="image/jpg, image/jpeg, image/png" >
+<form (ngSubmit)="onSubmit()">
+  <input
+    type="file"
+    name="foto"
+    [(ngModel)]="foto"
+    (change)="inputFoto($event)"
+    accept="image/jpg, image/jpeg, image/png" >
 
-  <button class="confirm" routerLink="/cadastro"> abrir uma conta </button>
+  <button type="submit" class="confirm"> abrir uma conta </button>
 </form>
 </div>
