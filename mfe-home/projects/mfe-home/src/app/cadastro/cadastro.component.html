@@ -20,13 +20,13 @@
       <div class="col">
         <label>Nome Completo</label>
         <input type="text" class="form-control" label="Nome Completo" id="nomeCompleto" formControlName="nomeCompleto" placeholder="Ex; João da Silva" >
-        <span *ngIf="!formulario.get('nomeCompleto')!.valid! && formulario.get('nomeCompleto')!.touched"> Nome Inválido </span>
+        <small *ngIf="!formulario.get('nomeCompleto')!.valid! && formulario.get('nomeCompleto')!.touched"> Nome Inválido </small>
       </div>
 
       <div class="col">
         <label>Email</label>
         <input type="email" class="form-control" id="email" formControlName="email" placeholder="Ex; seuemail@email.com" >
-        <span *ngIf="!formulario.get('email')!.valid! && formulario.get('email')!.touched"> Email inválido </span>
+        <small *ngIf="!formulario.get('email')!.valid! && formulario.get('email')!.touched"> Email inválido </small>
       </div>
     </div>
 
@@ -34,19 +34,19 @@
       <div class="col">
         <label>CPF</label>
         <input type="text" class="form-control" id="cpf" formControlName="cpf" placeholder="apenas números" >
-        <span *ngIf="!validar() && formulario.get('cpf')!.touched"> CPF inválido </span>
+        <small *ngIf="!validar() && formulario.get('cpf')!.touched"> CPF inválido </small>
       </div>
 
       <div class="form-group col-md-2">
         <label>Data de Nascimento</label>
         <input type="date" class="form-control" id="dataNascimento" formControlName="dataNascimento" placeholder="Ex; 12/01/2001"  >
-        <span *ngIf="!formulario.get('dataNascimento')!.valid! && formulario.get('dataNascimento')!.touched"> Data Inválida </span>
+        <small *ngIf="!formulario.get('dataNascimento')!.valid! && formulario.get('dataNascimento')!.touched"> Data Inválida </small>
       </div>
 
       <div class="col">
         <label>Salário Mensal</label>
         <input type="text" class="form-control" id="salarioMensal" formControlName="salarioMensal" placeholder="Ex; 1500,00" >
-        <span *ngIf="!formulario.get('salarioMensal')!.valid! && formulario.get('salarioMensal')!.touched"> Valor inválido </span>
+        <small *ngIf="!formulario.get('salarioMensal')!.valid! && formulario.get('salarioMensal')!.touched"> Valor inválido </small>
       </div>
     </div>
 
@@ -54,13 +54,13 @@
       <div class="col">
         <label>Senha</label>
         <input type="password" class="form-control" id="senha" formControlName="senha" >
-        <span *ngIf="!formulario.get('senha')!.valid! && formulario.get('senha')!.touched"> Senha inválida </span>
+        <small *ngIf="!formulario.get('senha')!.valid! && formulario.get('senha')!.touched"> Senha inválida </small>
       </div>
 
       <div class="col">
         <label>Celular</label>
         <input type="text" class="form-control" id="numeroCelular" formControlName="numeroCelular" >
-        <span *ngIf="!formulario.get('numeroCelular')!.valid! && formulario.get('numeroCelular')!.touched"> Número inválido </span>
+        <small *ngIf="!formulario.get('numeroCelular')!.valid! && formulario.get('numeroCelular')!.touched"> Número inválido </small>
       </div>
     </div>
 
@@ -69,19 +69,19 @@
       <div class="col">
         <label>CEP</label>
         <input type="text" class="form-control" id="cep" formControlName="cep" >
-        <span *ngIf="!formulario.get('endereco.cep')!.valid! && formulario.get('endereco.cep')!.touched"> CEP inválido </span>
+        <small *ngIf="!formulario.get('endereco.cep')!.valid! && formulario.get('endereco.cep')!.touched"> CEP inválido </small>
       </div>
 
       <div class="form-group col-md-6">
         <label>Rua</label>
         <input type="text" class="form-control" id="rua"  formControlName="rua">
-        <span *ngIf="!formulario.get('endereco.rua')!.valid! && formulario.get('endereco.rua')!.touched"> Valor inválido </span>
+        <small *ngIf="!formulario.get('endereco.rua')!.valid! && formulario.get('endereco.rua')!.touched"> Valor inválido </small>
       </div>
 
       <div class="form-group col-md-2">
         <label>Número</label>
         <input type="text" class="form-control" id="numero" formControlName="numero" >
-        <span *ngIf="!formulario.get('endereco.numero')!.valid! && formulario.get('endereco.numero')!.touched"> Número inválido </span>
+        <small *ngIf="!formulario.get('endereco.numero')!.valid! && formulario.get('endereco.numero')!.touched"> Número inválido </small>
       </div>
     </div>
 
@@ -90,24 +90,24 @@
       <div class="col">
         <label>Bairro</label>
         <input type="text" class="form-control" id="bairro" formControlName="bairro" >
-        <span *ngIf="!formulario.get('endereco.bairro')!.valid! && formulario.get('endereco.bairro')!.touched"> Bairro inválido </span>
+        <small *ngIf="!formulario.get('endereco.bairro')!.valid! && formulario.get('endereco.bairro')!.touched"> Bairro inválido </small>
       </div>
 
       <div class="col">
         <label>Cidade</label>
         <input type="text" class="form-control" id="cidade"  formControlName="cidade">
-        <span *ngIf="!formulario.get('endereco.cidade')!.valid! && formulario.get('endereco.cidade')!.touched"> Valor inválido </span>
+        <small *ngIf="!formulario.get('endereco.cidade')!.valid! && formulario.get('endereco.cidade')!.touched"> Valor inválido </small>
       </div>
 
       <div class="form-group col-md-2">
         <label>Estado</label>
         <input type="text" class="form-control" id="estado" formControlName="estado" >
-        <span *ngIf="!formulario.get('endereco.estado')!.valid! && formulario.get('endereco.estado')!.touched"> Número inválido </span>
+        <small *ngIf="!formulario.get('endereco.estado')!.valid! && formulario.get('endereco.estado')!.touched"> Número inválido </small>
       </div>
 
     </div>
 
-    <span *ngIf="!formulario.valid" > Preencha todos os campos do formulário </span>
+    <small *ngIf="!formulario.valid" > Preencha todos os campos do formulário </small>
     <button class="confirm" [disabled]="!formulario.valid"> abrir uma conta </button>
   </form>
 </div>

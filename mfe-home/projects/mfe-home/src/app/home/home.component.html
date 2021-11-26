@@ -4,12 +4,11 @@
   <link rel="stylesheet" type="text/css" href="./home.component.scss" media="screen" />
 </head>
 
-
 <nav class="navbar">
-  <span class="navbar-brand mb-0 h1" style="font-size: 2rem;">
+  <h3 class="navbar-brand mb-0 h1" style="font-size: 2rem;">
     <i class="bi bi-coin"></i>
     Banco Bauhaus
-  </span>
+  </h3>
 </nav>
 
 <div style="
@@ -27,17 +26,17 @@
   <p> Abra sua conta com praticidade, segurança e sem sair de casa! </p>
 
   <input type="text" class="form-control" name="cpf" placeholder="insira seu cpf" [(ngModel)]="cpf" autofocus />
-  <span *ngIf="!validar()" >
+  <small *ngIf="!validar()" >
     CPF inválido
-  </span>
+  </small>
   <button type="submit" class="confirm"> abrir uma conta </button>
 </form>
 </div>
 </div>
 
-<div class='box'>
+<div class='box' style="margin: 10px; margin-top: 48px;">
 
-  <h3> Encontre o produto ideal para você! </h3>
+  <h2> Encontre o produto ideal para você! </h2>
   <p> Veja alguns dos serviços que você pode solicitar durante o processo de abertura: </p>
 
   <div class='row' >

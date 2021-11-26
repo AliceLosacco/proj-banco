@@ -36,7 +36,7 @@
 
 </form>
 
-<span *ngIf="!validar()"> Selecione um plano </span>
+<small *ngIf="!validar()"> Selecione um plano </small>
 
 <button class="confirm" (click)="onSubmit()" [disabled]="!validar()" >abrir uma conta </button>
 </div>

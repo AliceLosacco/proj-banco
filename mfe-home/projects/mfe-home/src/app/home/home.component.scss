@@ -65,6 +65,11 @@ input {
   width: 100%;
 }
 
+small {
+  color: $secondary-color;
+  font-weight: bold;
+}
+
 nav.navbar{
   background-color: $primary-color;
   color:$terciary-color
@@ -73,11 +78,6 @@ nav.navbar{
 h2 {
   color: $secondary-color;
   font-weight: bold;
-}
-
-h3 {
-  margin: 48px;
-  color: $secondary-color
 }
 
 label {

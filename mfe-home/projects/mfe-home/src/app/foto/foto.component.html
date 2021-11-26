@@ -29,7 +29,7 @@
       accept="image/jpg, image/jpeg, image/png">
     <label class="custom-file-label" for="customFile" data-browse="Selecionar" >Selecione um arquivo</label>
   </div>
-  <span *ngIf="!foto"> Nenhum arquivo selecionado </span>
+  <small *ngIf="!foto"> Nenhum arquivo selecionado </small>
 
   <button type="submit" class="confirm" [disabled]="!foto"> abrir uma conta </button>
 </form>
