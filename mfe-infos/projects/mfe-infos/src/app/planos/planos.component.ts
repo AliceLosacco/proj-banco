@@ -77,4 +77,11 @@ export class PlanosComponent implements OnInit {
     }
     return false
   }
+
+  validar(){
+    if(this.planoSelecionado.plano){
+      return true
+    }
+    return false
+  }
 }

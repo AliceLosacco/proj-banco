@@ -11,7 +11,18 @@ div.box {
   display: flex;
   flex-direction: column;
   font-family: $font-style;
-  margin: 24px;
+  margin: 48px;
+}
+
+div.row {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 24px;
+}
+
+i{
+  font-size: 2rem;
+  color: $secondary-color;
 }
 
 form {
@@ -53,5 +64,6 @@ h2 {
 }
 
 label {
-  font-size: 14px;
+  font-size: 20px;
+  color: $secondary-color;
 }

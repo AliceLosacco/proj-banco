@@ -5,7 +5,7 @@
 
 
 <nav class="navbar">
-  <span class="navbar-brand mb-0 h1">Banco Bauhaus</span>
+  <h3 class="navbar-brand mb-0 h1">Banco Bauhaus</h3>
 </nav>
 
 <div class="box">
@@ -18,8 +18,9 @@
     name="foto"
     [(ngModel)]="foto"
     (change)="inputFoto($event)"
+    required
     accept="image/jpg, image/jpeg, image/png" >
-
-  <button type="submit" class="confirm"> abrir uma conta </button>
+  <span *ngIf="!foto" > Realize o upload de uma selfie! </span>
+  <button type="submit" class="confirm" [disabled]="!foto"> abrir uma conta </button>
 </form>
 </div>

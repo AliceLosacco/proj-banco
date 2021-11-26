@@ -11,13 +11,12 @@ div.box {
   display: flex;
   flex-direction: column;
   font-family: $font-style;
+  margin: 48px;
   align-items: center;
 }
 
 div.row {
-  justify-content: 'space-around';
-  margin-right: 124px;
-  margin-left: 124px;
+  justify-content: space-evenly;
   padding: 24px;
 }
 
@@ -34,6 +33,7 @@ div.card.is-selected {
   border: $secondary-color;
   border-style: solid;
   color: $secondary-color;
+  font-weight: bold;
 }
 
 nav.navbar{
@@ -52,6 +52,13 @@ form {
   gap: 10px;
 }
 
+span {
+  color: $secondary-color;
+  font-size: 8;
+  font-weight: bold;
+  margin: 20px;
+}
+
 button.confirm {
   background-color: $secondary-color;
   border-radius: 5px;
@@ -60,6 +67,18 @@ button.confirm {
   font-weight: bold;
   font-size: 14px;
   padding: 8px 8px;
+  width: 124px;
+}
+
+button.confirm:disabled  {
+  background-color: $primary-color;
+  border-radius: 5px;
+  border: none;
+  color: $terciary-color;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 8px;
+  width: 124px;
 }
 
 input {

@@ -3,7 +3,7 @@
 </head>
 
 <nav class="navbar">
-  <span class="navbar-brand mb-0 h1">Banco Bauhaus</span>
+  <h3 class="navbar-brand mb-0 h1">Banco Bauhaus</h3>
 </nav>
 
 <div class="box">
@@ -29,8 +29,11 @@
 </div>
 </div>
 
-
 </form>
 
-<button class="confirm" (click)="onSubmit()" >abrir uma conta </button>
+<span *ngIf="!validar()"> Selecione um plano </span>
+
+<button class="confirm" (click)="onSubmit()" [disabled]="!validar()" >abrir uma conta </button>
+</div>
+
 

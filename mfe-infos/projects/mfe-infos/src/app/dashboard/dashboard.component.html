@@ -1,6 +1,7 @@
 <head>
 
   <link rel="stylesheet" type="text/css" href="./dashboard.component.scss" media="screen" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 </head>
 
 <nav class="navbar navbar-expand-lg">
@@ -11,7 +12,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#" > Alterar Plano <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" onclick="editarPlano()"> Alterar Plano <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Alterar Dados Cadastrais</a>
@@ -21,19 +22,10 @@
 </nav>
 
 <div class="box">
+  <h2>Bem vindo {{ formulario.value.nomeCompleto }}</h2>
+  <p> Confira abaixo os dados de sua conta </p>
 
-  <form [formGroup]="formulario" >
-    <div class="form-row">
-      <div class="col">
-      <label>Nome Completo</label>
-      <input
-        type="text"
-        class="form-control"
-        label="Nome Completo"
-        id="nomeCompleto"
-        formControlName="nomeCompleto">
-      </div>
-    </div>
+  <form [formGroup]="formulario">
     <div class="form-row" formGroupName="plano">
     <div class="col">
       <label>Tipo de Conta</label>
@@ -52,4 +44,62 @@
   </div>
   </form>
   </div>
+
+  <div class='box'>
+
+  <h3> Encontre o produto ideal para você! </h3>
+  <p> Veja alguns dos serviços disponíveis para você </p>
+
+  <div class='row' >
+    <div
+      class="card"
+      name='card'>
+      <div class ="card-body">
+        <i class="bi bi-credit-card"></i>
+        <h5 class="card-title">cartão de crédito</h5>
+        <p class="card-text">encontre a opção ideal para você</p>
+      </div>
+    </div>
+
+    <div
+      class="card"
+      name='card'>
+      <div class ="card-body">
+        <i class="bi bi-card-checklist"></i>
+        <h5 class="card-title">cheque especial</h5>
+        <p class="card-text">limite para sua conta corrente</p>
+      </div>
+    </div>
+
+    <div
+      class="card"
+      name='card'>
+      <div class ="card-body">
+        <i class="bi bi-piggy-bank"></i>
+        <h5 class="card-title">ad. depositante</h5>
+        <p class="card-text">crédito para evitar imprevistos</p>
+      </div>
+    </div>
+
+    <div
+      class="card"
+      name='card'>
+      <div class ="card-body">
+        <i class="bi bi-graph-up-arrow"></i>
+        <h5 class="card-title">rendimento aut.</h5>
+        <p class="card-text">seu dinheiro rende automaticamente</p>
+      </div>
+    </div>
+
+    <div
+      class="card"
+      name='card'>
+      <div class ="card-body">
+        <i class="bi bi-star"></i>
+        <h5 class="card-title">pacote de serviço</h5>
+        <p class="card-text">encontre a opção ideal para você</p>
+      </div>
+    </div>
+  </div>
+</div>
 

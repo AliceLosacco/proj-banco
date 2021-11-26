@@ -17,13 +17,18 @@ div.box {
   align-items: center;
 }
 
+i{
+  font-size: 2rem;
+  color: $secondary-color;
+}
+
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   margin: 24px;
-  margin-top: 48px;
+  margin-top: 112px;
   padding: 24px;
   background-color: rgba(204, 204, 204, 0.836);
 }
@@ -39,16 +44,8 @@ div.card {
   margin: 24px;
   width: 248px;
   height: 200px;
+  border-color: $secondary-color;
 }
-
-div.card a:focus {
-  margin: 24px;
-  width: 248px;
-  height: 200px;
-  border: red;
-  border-style: solid;
-}
-
 
 button.confirm {
   background-color: $secondary-color;
@@ -76,6 +73,11 @@ nav.navbar{
 h2 {
   color: $secondary-color;
   font-weight: bold;
+}
+
+h3 {
+  margin: 48px;
+  color: $secondary-color
 }
 
 label {

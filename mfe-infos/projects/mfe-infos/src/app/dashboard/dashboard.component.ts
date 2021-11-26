@@ -1,8 +1,7 @@
 import { FormGroup, FormControl } from '@angular/forms';
 import { DashboardService } from './dashboard.service';
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-infos',
@@ -15,7 +14,11 @@ export class DashboardComponent implements OnInit {
   dadosCliente: {} = {};
   formulario!: FormGroup;
 
-  constructor(private http: HttpClient, private service: DashboardService, private route: ActivatedRoute) {
+  constructor(
+    private service: DashboardService,
+    private route: ActivatedRoute,
+    private router: Router
+    ) {
     this.formulario = new FormGroup({
       nomeCompleto: new FormControl({value: '', disabled: true}),
       plano: new FormGroup({
@@ -56,6 +59,16 @@ export class DashboardComponent implements OnInit {
         console.log(error)
       }
     )
+  }
+
+  editarPlano(){
+    const salario = this.formulario.value.salarioMensal
+    this.router.navigate(['planos'], {
+      queryParams: {
+        cpf: this.cpf,
+        salarioMensal: salario,
+      }
+    })
   }
 
 }

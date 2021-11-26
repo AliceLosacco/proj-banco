@@ -11,7 +11,13 @@ div.box {
   display: flex;
   flex-direction: column;
   font-family: $font-style;
+  margin: 48px;
   align-items: center;
+}
+
+span {
+  color: $secondary-color;
+  font-size: 8;
 }
 
 nav.navbar{
@@ -27,6 +33,7 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
@@ -38,6 +45,17 @@ button.confirm {
   font-weight: bold;
   font-size: 14px;
   padding: 8px 8px;
+}
+
+button.confirm:disabled  {
+  background-color: $primary-color;
+  border-radius: 5px;
+  border: none;
+  color: $terciary-color;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 8px;
+  width: 124px;
 }
 
 input {
