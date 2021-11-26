@@ -1,10 +1,8 @@
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,8 +13,8 @@ import { CommonModule } from '@angular/common';
     imports: [
         CommonModule,
         DashboardRoutingModule,
-        MatFormFieldModule,
-        MatToolbarModule
+        ReactiveFormsModule,
+        FormsModule,
 
     ],
     providers: []

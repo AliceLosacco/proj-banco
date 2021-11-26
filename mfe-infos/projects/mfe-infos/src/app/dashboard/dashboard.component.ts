@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
 
   cpf: string = '';
   dadosCliente: {} = {};
-  formulario!: FormGroup
+  formulario!: FormGroup;
 
   constructor(private http: HttpClient, private service: DashboardService, private route: ActivatedRoute) {
     this.formulario = new FormGroup({
