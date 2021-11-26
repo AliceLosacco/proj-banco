@@ -20,6 +20,13 @@ div.row {
   padding: 24px;
 }
 
+div.card {
+  margin: 12px;
+  width: 248px;
+  height: 200px;
+  border-color: $secondary-color;
+}
+
 i{
   font-size: 2rem;
   color: $secondary-color;

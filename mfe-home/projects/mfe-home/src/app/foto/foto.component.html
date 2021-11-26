@@ -16,14 +16,21 @@
 <p> Envie uma selfie para validarmos sua identidade! </p>
 
 <form (ngSubmit)="onSubmit()">
-  <input
-    type="file"
-    name="foto"
-    [(ngModel)]="foto"
-    (change)="inputFoto($event)"
-    required
-    accept="image/jpg, image/jpeg, image/png" >
-  <span *ngIf="!foto" > Realize o upload de uma selfie! </span>
+
+  <div class="custom-file">
+    <input
+      type="file"
+      class="custom-file-input"
+      id="customFile"
+      name="foto"
+      [(ngModel)]="foto"
+      (change)="inputFoto($event)"
+      required
+      accept="image/jpg, image/jpeg, image/png">
+    <label class="custom-file-label" for="customFile" data-browse="Selecionar" >Selecione um arquivo</label>
+  </div>
+  <span *ngIf="!foto"> Nenhum arquivo selecionado </span>
+
   <button type="submit" class="confirm" [disabled]="!foto"> abrir uma conta </button>
 </form>
 </div>
