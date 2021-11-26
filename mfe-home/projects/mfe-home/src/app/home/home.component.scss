@@ -1,15 +1,18 @@
-$primary-color: #F2CF63;
-$secondary-color: #49668C;
-$terciary-color: #BF5630;
+$primary-color: #222222;
+$secondary-color: rgb(161, 0, 81);
+$terciary-color: rgba(204, 204, 204, 0.836);
 $font-style: Helvetica, sans-seriff;
 
-div.body {
-  background-color: rgb(219, 218, 212);
+div.background {
+  //background-color: rgb(219, 218, 212);
+  background-image: url('../../assets/background.jpg');
+  background-size: 100em 100em;
 }
 
 div.box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-family: $font-style;
   align-items: center;
 }
@@ -17,8 +20,35 @@ div.box {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
+  margin: 24px;
+  margin-top: 48px;
+  padding: 24px;
+  background-color: rgba(204, 204, 204, 0.836);
 }
+
+div.row {
+  justify-content: 'space-evenly';
+  margin-right: 124px;
+  margin-left: 124px;
+  padding: 24px;
+}
+
+div.card {
+  margin: 24px;
+  width: 248px;
+  height: 200px;
+}
+
+div.card a:focus {
+  margin: 24px;
+  width: 248px;
+  height: 200px;
+  border: red;
+  border-style: solid;
+}
+
 
 button.confirm {
   background-color: $secondary-color;
@@ -38,8 +68,14 @@ input {
   width: 100%;
 }
 
-mat-toolbar {
+nav.navbar{
   background-color: $primary-color;
+  color:$terciary-color
+}
+
+h2 {
+  color: $secondary-color;
+  font-weight: bold;
 }
 
 label {

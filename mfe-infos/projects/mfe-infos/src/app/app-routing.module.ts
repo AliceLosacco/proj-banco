@@ -2,11 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'infos',
-    pathMatch: 'full',
-  },
 
   {
     path: 'infos',
@@ -24,6 +19,12 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+  },
+
+  {
+    path: '',
+    redirectTo: 'infos',
+    pathMatch: 'full',
   },
 ];
 

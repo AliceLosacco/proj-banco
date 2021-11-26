@@ -52,8 +52,16 @@ export class CadastroComponent implements OnInit {
   }
 
   onSubmit() {
+    this.inserirCliente()
+  }
+
+  //chamada do serviço apra incluir cliente
+  inserirCliente(){
+    const data = this.formulario.value.dataNascimento
+    this.formulario.value.dataNascimento = this.transformaDataCreate(data)
+    console.log(this.formulario.value.dataNascimento)
     this.service.inserirDados(this.formulario.value).subscribe(
-      (dados) => {
+      (res) => {
         this.router.navigate(['foto'], {
           queryParams: {
             cpf: this.formulario.value.cpf,
@@ -67,9 +75,16 @@ export class CadastroComponent implements OnInit {
     );
   }
 
+  //transforma a data recbida para o padrão do tipo date no html
   transformaData(data: string) {
     const d = data.split('/');
     return [d[2], d[1], d[0]].join('-');
+  }
+
+  //transforma a data vinda do html no padrão para o service
+  transformaDataCreate(data: string) {
+    const d = data.split('-');
+    return [d[2], d[1], d[0]].join('/');
   }
 
   populaForm(dadosValue: any) {

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { DashboardComponent } from './dashboard.component';
 
     ],
     imports: [
-        BrowserModule,
+        CommonModule,
         DashboardRoutingModule,
         MatFormFieldModule,
         MatToolbarModule

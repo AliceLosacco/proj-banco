@@ -1,7 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-$primary-color: #e69318;
-$secondary-color: #2842b8;
-$terciary-color: #be1e2d;
+$primary-color: #222222;
+$secondary-color: rgb(161, 0, 81);
+$terciary-color: rgba(204, 204, 204, 0.836);
 $font-style: Helvetica, sans-seriff;
 
 div.body {
@@ -12,7 +11,7 @@ div.box {
   display: flex;
   flex-direction: column;
   font-family: $font-style;
-  align-items: center;
+  margin: 24px;
 }
 
 form {
@@ -29,6 +28,25 @@ button.confirm {
   font-weight: bold;
   font-size: 14px;
   padding: 8px 8px;
+}
+.warn {
+  background-color: $terciary-color;
+  border-radius: 5px;
+  border: none;
+  color: $secondary-color;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 8px;
+}
+
+nav.navbar{
+  background-color: $primary-color;
+  color:$terciary-color
+}
+
+h2 {
+  color: $secondary-color;
+  font-weight: bold;
 }
 
 input {

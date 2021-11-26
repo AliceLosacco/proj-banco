@@ -12,4 +12,8 @@ constructor(private http: HttpClient) { }
     return this.http.post('http://bancoapi-env.eba-ra7jpuyh.us-east-2.elasticbeanstalk.com/api/Planos/planosDisponiveis', { rendaMensal });
   }
 
+  registrarPlano(plano: {}){
+    return this.http.post('http://bancoapi-env.eba-ra7jpuyh.us-east-2.elasticbeanstalk.com/api/Clientes/alterarPlano', plano);
+  }
+
 }

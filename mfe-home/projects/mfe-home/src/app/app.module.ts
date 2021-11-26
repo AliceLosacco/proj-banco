@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { CadastroModule } from './cadastro/cadastro.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FotoModule } from './foto/foto.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     HomeModule,
     CadastroModule,
+    FotoModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule

@@ -1,7 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-$primary-color: #F2CF63;
-$secondary-color: #49668C;
-$terciary-color: #BF5630;
+$primary-color: #222222;
+$secondary-color: rgb(161, 0, 81);
+$terciary-color: rgba(204, 204, 204, 0.836);
 $font-style: Helvetica, sans-seriff;
 
 div.body {
@@ -13,6 +12,16 @@ div.box {
   flex-direction: column;
   font-family: $font-style;
   margin: 24px;
+}
+
+nav.navbar{
+  background-color: $primary-color;
+  color:$terciary-color
+}
+
+h2 {
+  color: $secondary-color;
+  font-weight: bold;
 }
 
 form {

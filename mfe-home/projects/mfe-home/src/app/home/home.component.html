@@ -1,22 +1,54 @@
+
 <head>
 
   <link rel="stylesheet" type="text/css" href="./home.component.scss" media="screen" />
 </head>
 
-<p>
-  <mat-toolbar>
-    <span>Banco Bauhaus</span>
-  </mat-toolbar>
-</p>
 
+<nav class="navbar">
+  <span class="navbar-brand mb-0 h1">Banco Bauhaus</span>
+</nav>
+
+<div style="
+  background-image: url('../../assets/background1.jpg');
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+">
 <div class="box">
-<h2> Abrir conta </h2>
-<p> Abra sua conta com praticidade, segurança e sem sair de casa! </p>
 
 <form (ngSubmit)="salvarCpf(cpf)" >
-    <input type="text" name="cpf" placeholder="insira seu cpf" [(ngModel)]="cpf" autofocus />
+
+  <h2> Abrir conta </h2>
+  <p> Abra sua conta com praticidade, segurança e sem sair de casa! </p>
+
+  <input type="text" class="form-control" name="cpf" placeholder="insira seu cpf" [(ngModel)]="cpf" autofocus />
 
   <button type="submit" class="confirm"> abrir uma conta </button>
 </form>
+</div>
+
+<!-- <div class='row'>
+  <div class="card">
+    <div class ="card-body">
+      <h5 class="card-title"> cartão de crédito </h5>
+      <p class="card-text"> encontre a opção ideal para você </p>
+    </div>
+    <div class="card">
+      <div class ="card-body">
+        <h5 class="card-title"> cheque especial </h5>
+        <p class="card-text"> limite para sua conta corrente </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class ="card-body">
+        <h5 class="card-title"> rendimento aut. </h5>
+        <p class="card-text"> seu dinheiro rende automaticamente </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
 </div>
 

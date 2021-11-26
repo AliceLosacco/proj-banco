@@ -3,14 +3,53 @@
   <link rel="stylesheet" type="text/css" href="./dashboard.component.scss" media="screen" />
 </head>
 
-<p>
-  <mat-toolbar>
-    <span>Banco Bauhaus</span>
-  </mat-toolbar>
-</p>
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Banco Bauhaus</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" > Alterar Plano <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Alterar Dados Cadastrais</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <div class="box">
-<h2> Dashboard </h2>
-<p> Dados da sua conta </p>
 
-</div>
+  <form >
+    <div class="form-row">
+      <div class="col">
+      <label>Nome Completo</label>
+      <input
+        type="text"
+        class="form-control"
+        label="Nome Completo"
+        id="nomeCompleto"
+        formControlName="nomeCompleto">
+      </div>
+    </div>
+    <div class="form-row" formGroupName="plano">
+    <div class="col">
+      <label>Tipo de Conta</label>
+      <input type="text" class="form-control" id="tipoConta"  formControlName="tipoConta">
+      </div>
+
+      <div class="form-group col-md-2">
+        <label>Custo Mensal</label>
+        <input type="text" class="form-control" id="custoMensal" formControlName="custoMensal" >
+        </div>
+
+      <div class="col">
+      <label>Tipo de Cartão</label>
+      <input type="text" class="form-control" id="tipoCartao" formControlName="tipoCartao" >
+    </div>
+  </div>
+  </form>
+  </div>
+

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { InfosRoutingModule } from './infos-routing.module';
 import { InfosComponent } from './infos.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,8 +15,10 @@ import { InfosComponent } from './infos.component';
     imports: [
         BrowserModule,
         InfosRoutingModule,
+        FormsModule,
         HttpClientModule,
         MatToolbarModule,
+        ReactiveFormsModule
 
     ],
     providers: []
