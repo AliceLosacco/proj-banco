@@ -21,18 +21,16 @@ export class CadastroComponent implements OnInit {
   ) {
     //criação do data-driven form
     this.formulario = new FormGroup({
-      nomeCompleto: new FormControl(''),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      confirmarEmail: new FormControl(''),
-      cpf: new FormControl(''),
-      dataNascimento: new FormControl(''),
-      salarioMensal: new FormControl(''),
-      senha: new FormControl(''),
-      confirmarSenha: new FormControl(''),
-      numeroCelular: new FormControl(''),
+      nomeCompleto: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email, Validators.required]),
+      cpf: new FormControl('', [Validators.required]),
+      dataNascimento: new FormControl('', [Validators.required]),
+      salarioMensal: new FormControl('', [Validators.required]),
+      senha: new FormControl('', [Validators.required]),
+      numeroCelular: new FormControl('', [Validators.required]),
 
       endereco: new FormGroup({
-        cep: new FormControl(''),
+        cep: new FormControl('', Validators.required),
         rua: new FormControl('', Validators.required),
         numero: new FormControl('', Validators.required),
         complemento: new FormControl(''),
@@ -125,6 +123,16 @@ export class CadastroComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  validar(){
+    const data: any = this.formulario.value.cpf
+    if(data.length != 11){
+      return false
+    }
+    else {
+      return true
+    }
   }
 
 }

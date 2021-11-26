@@ -24,7 +24,9 @@
   <p> Abra sua conta com praticidade, segurança e sem sair de casa! </p>
 
   <input type="text" class="form-control" name="cpf" placeholder="insira seu cpf" [(ngModel)]="cpf" autofocus />
-
+  <span *ngIf="!validar()" >
+    CPF inválido
+  </span>
   <button type="submit" class="confirm"> abrir uma conta </button>
 </form>
 </div>
