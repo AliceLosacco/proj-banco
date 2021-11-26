@@ -12,33 +12,32 @@
 </nav>
 
 <div class="box">
-<h2> Planos </h2>
-<p> Escolha entre um dos planos disponíveis </p>
+  <h2> Planos </h2>
+  <p style="text-align: center;"> Escolha entre um dos planos disponíveis </p>
 
-<form #f="ngForm">
-<div class='row' *ngIf="planos">
-  <div *ngFor="let plano of planos">
-  <div
-    class="card"
-    name='card'
-    [ngClass]="{'is-selected': aplicaCssClicado(plano.tipoConta)}"
-    (click)="inputConta(plano)">
-    <div class ="card-body">
-      <h5 class="card-title">{{ plano.tipoConta }}</h5>
-      <label>Cartão</label>
-      <p class="card-text">{{ plano.tipoCartao }}</p>
-      <label>Custo Mensal</label>
-      <p class="card-text">{{ plano.custoMensal }}</p>
+  <form #f="ngForm">
+    <div class='row' *ngIf="planos">
+      <div *ngFor="let plano of planos">
+        <div
+          class="card"
+          name='card'
+          [ngClass]="{'is-selected': aplicaCssClicado(plano.tipoConta)}"
+          (click)="inputConta(plano)">
+          <div class ="card-body">
+            <h5 class="card-title">{{ plano.tipoConta }}</h5>
+            <label>Cartão</label>
+            <p class="card-text">{{ plano.tipoCartao }}</p>
+            <label>Custo Mensal</label>
+            <p class="card-text">{{ plano.custoMensal }}</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
+  </form>
 
-</form>
+  <small *ngIf="!validar()"> Selecione um plano </small>
 
-<small *ngIf="!validar()"> Selecione um plano </small>
-
-<button class="confirm" (click)="onSubmit()" [disabled]="!validar()" >abrir uma conta </button>
+  <button class="confirm" (click)="onSubmit()" [disabled]="!validar()" >abrir uma conta </button>
 </div>
 
 

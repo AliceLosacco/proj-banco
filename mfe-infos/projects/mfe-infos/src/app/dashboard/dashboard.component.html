@@ -6,16 +6,16 @@
 
 <nav class="navbar">
   <a href="#" class="navbar-brand mb-0 h1" style="font-size: 2rem;">
-    <i class="bi bi-coin"></i>
+  <i class="bi bi-coin"></i>
     Banco Bauhaus
   </a>
   <div class="collapse navbar-collapse" id="navbarNav">
-  <ul class="navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
-    </div>
+  </div>
 </nav>
 
 <div class="box">
@@ -24,23 +24,23 @@
 
   <form [formGroup]="formulario">
     <div class="form-row" formGroupName="plano">
-    <div class="col">
-      <label>Tipo de Conta</label>
-      <input type="text" class="form-control" id="tipoConta"  formControlName="tipoConta">
+      <div class="col">
+        <label>Tipo de Conta</label>
+        <input type="text" class="form-control" id="tipoConta"  formControlName="tipoConta">
       </div>
 
       <div class="form-group col-md-2">
         <label>Custo Mensal</label>
         <input type="text" class="form-control" id="custoMensal" formControlName="custoMensal" >
-        </div>
+      </div>
 
       <div class="col">
-      <label>Tipo de Cartão</label>
-      <input type="text" class="form-control" id="tipoCartao" formControlName="tipoCartao" >
+        <label>Tipo de Cartão</label>
+        <input type="text" class="form-control" id="tipoCartao" formControlName="tipoCartao" >
+      </div>
     </div>
-  </div>
   </form>
-  </div>
+</div>
 
   <div class='box'>
 
